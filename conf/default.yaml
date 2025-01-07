@@ -1,0 +1,58 @@
+logLevel: "info"
+logFile: "rrconf.log"
+overwrite: true
+dbFile: "cache/rrfusion.json"
+
+rpki:
+  enabled: true
+  cacheDir: "cache/rpki"
+  urls:
+    - "https://console.rpki-client.org/rpki.json"
+
+delegated:
+  enabled: true
+  cacheDir: "cache/delegated"
+  urls:
+    - "https://www.nro.net/wp-content/uploads/delegated-stats/nro-extended-stats"
+
+irr:
+  enabled: true
+  cacheDir: "cache/irr"
+  rpkiValid: true
+  asnFilter: false
+  prefixFilter: false
+  countryFilter: "CN"
+  dateFilter: 99
+  urls:
+    - "ftp://ftp.radb.net/radb/dbase/altdb.db.gz"
+    - "ftp://ftp.radb.net/radb/dbase/bboi.db.gz"
+    - "ftp://ftp.radb.net/radb/dbase/bell.db.gz"
+    - "ftp://ftp.radb.net/radb/dbase/canarie.db.gz"
+    - "ftp://ftp.radb.net/radb/dbase/jpirr.db.gz"
+    - "ftp://ftp.radb.net/radb/dbase/nestegg.db.gz"
+    - "ftp://ftp.radb.net/radb/dbase/nttcom.db.gz"
+    - "ftp://ftp.radb.net/radb/dbase/panix.db.gz"
+    - "ftp://ftp.radb.net/radb/dbase/radb.db.gz"
+    - "ftp://ftp.radb.net/radb/dbase/reach.db.gz"
+    - "ftp://ftp.radb.net/radb/dbase/tc.db.gz"
+    - "ftp://rr.Level3.net/level3.db.gz"
+    - "ftp://rr.Level3.net/wcgdb.db.gz"
+    - "ftp://irr-mirror.idnic.net/idnic.db.gz"
+    - "ftp://ftp.arin.net/pub/rr/arin.db.gz"
+    - "ftp://ftp.afrinic.net/pub/dbase/afrinic.db.gz"
+    - "ftp://ftp.apnic.net/pub/apnic/whois/apnic.db.route.gz"
+    - "ftp://ftp.apnic.net/pub/apnic/whois/apnic.db.route6.gz"
+    - "https://ftp.lacnic.net/lacnic/irr/lacnic.db.gz"
+    - "ftp://ftp.ripe.net/ripe/dbase/split/ripe-nonauth.db.route.gz"
+    - "ftp://ftp.ripe.net/ripe/dbase/split/ripe-nonauth.db.route6.gz"
+    - "ftp://ftp.ripe.net/ripe/dbase/split/ripe.db.route.gz"
+    - "ftp://ftp.ripe.net/ripe/dbase/split/ripe.db.route6.gz"
+
+vro:
+  enabled: true
+  cacheDir: "cache/vro"
+  rpkiValid: true
+  asnFilter: false
+  prefixFilter: false
+  urls:
+    - "http://127.0.0.1:8080/smg.json"

@@ -1,0 +1,58 @@
+{
+  "slurmVersion": 2,
+  "validationOutputFilters": {
+    "prefixFilters": [
+      {
+        "prefix": "192.0.2.0/24",
+        "comment": "All VRPs encompassed by prefix"
+      },
+      {
+        "asn": 64496,
+        "comment": "All VRPs matching ASN"
+      },
+      {
+        "prefix": "198.51.100.0/24",
+        "asn": 64497,
+        "comment": "All VRPs encompassed by prefix, matching ASN"
+      }
+    ],
+    "bgpsecFilters": [
+      {
+        "asn": 64496,
+        "comment": "All keys for ASN"
+      },
+      {
+        "SKI": "XC7RBWu3661vfYmhXZwtUw==",
+        "comment": "Key matching Router SKI"
+      },
+      {
+        "asn": 64497,
+        "SKI": "XC7RBWu3661vfYmhXZwtUw==",
+        "comment": "Key for ASN 64497 matching Router SKI"
+      }
+    ]
+  },
+  "locallyAddedAssertions": {
+    "prefixAssertions": [
+      {
+        "asn": 64496,
+        "prefix": "198.51.100.0/24",
+        "comment": "My other important route"
+      },
+      {
+        "asn": 64496,
+        "prefix": "2001:DB8::/32",
+        "maxPrefixLength": 48,
+        "comment": "My other important de-aggregated routes"
+      }
+    ],
+    "bgpsecAssertions": [
+      {
+        "asn": 64496,
+        "comment": "My known key for my important ASN",
+        "SKI": "NQYXZ0PgL2fdRscxGdVDa+fhAQY=",
+        "routerPublicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEhv5HEBGixUjKJTlenvcD1Axyi07rFdVY1KhN4vMPYy5y0Mx6zfaiEqJN27jK/l61xC36Vsaezd7eXAsZ1AEEsQ=="
+      }
+    ]
+  }
+}
